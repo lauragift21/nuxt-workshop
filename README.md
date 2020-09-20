@@ -1,5 +1,5 @@
 <h1 align="center">
-Build From Scratch with Nuxt Workshop
+Building From Scratch with Nuxt Workshop
 </h1>
 
 Instructor: Gift Egwuenu
