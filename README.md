@@ -11,7 +11,7 @@ Building From Scratch with Nuxt Workshop
 
 ## Sections
 - [Introduction](#Introduction)
-- [Setup and Installation](#SetupandInstallation)
+- [Setup and Installation](#setup-and-installation)
 - What is Nuxt.js and what does it offers
 - Setup new project using create-nuxt-app
 - Explaining the Nuxt Directory Structure
@@ -46,6 +46,22 @@ and then install node:
 
 ```bash
 brew install node
+```
+
+### Install Nuxt with Create Nuxt App
+
+```bash
+npx create-nuxt-app <project-name>
+```
+
+We already have a repo setup so go ahead and clone this repo using the following commands:
+
+```
+git clone https://github.com/lauragift21/nuxt-workshop.git
+```
+
+```
+cd nuxt-workshop && yarn
 ```
 
 ## Additional Resources 
