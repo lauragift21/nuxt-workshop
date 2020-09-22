@@ -2,12 +2,16 @@
 Building From Scratch with Nuxt Workshop
 </h1>
 
-Instructor: Gift Egwuenu
 
-This workshop is for anyone with knowledge of JavaScript and Vue.js interested in building web applications with Nuxt.js
+<p align="center">This workshop is for anyone with knowledge of JavaScript and Vue.js interested in building web applications with Nuxt.js</p>
+
+<p align="center">Instructor: <a href="https://giftegwuenu.com">Gift Egwuenu</a></p>
+
+[Workshop Slides](https://miro.com/app/board/o9J_kki51ks=/)
 
 ## Sections
-
+- [Introduction](#Introduction)
+- [Setup and Installation](#SetupandInstallation)
 - What is Nuxt.js and what does it offers
 - Setup new project using create-nuxt-app
 - Explaining the Nuxt Directory Structure
@@ -19,6 +23,30 @@ This workshop is for anyone with knowledge of JavaScript and Vue.js interested i
 - Extending our app with cool new Nuxt features (Nuxt Modules)
 - Deploying a Full Static App to Netlify
 
+
+## Introduction
+[Nuxt.js](https://nuxtjs.org/) is Vue framework for creating modern web applications that makes development painless and powerful with a great developer experience.
+
+In this workshop, we'll cover everything you need to know to build a web application from scratch with Nuxtjs. Some things we'll cover include setting up extend the functionality with Nuxt Modules and deployment strategies.
+
+## Setup and Installation
+You need to have [Node](https://nodejs.org/) installed on your computer before we begin the workshop.
+
+Download Node for windows [here](https://nodejs.org/en/download/)
+
+Download Node for Mac using [Homebrew](https://brew.sh/).
+
+If you don't have that installed use this command to install it
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+```
+and then install node:
+
+```bash
+brew install node
+```
 
 ## Additional Resources 
 [Nuxt Documentation](https://nuxtjs.org/guides)
