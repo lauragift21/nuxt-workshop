@@ -12,22 +12,23 @@ Building From Scratch with Nuxt Workshop
 ## Sections
 - [Introduction](#Introduction)
 - [Setup and Installation](#setup-and-installation)
-- What is Nuxt.js and what does it offers
-- Setup new project using create-nuxt-app
-- Explaining the Nuxt Directory Structure
-- Creating and Navigating between Pages with Nuxt Link
-- Understanding the Nuxt.config.js
-- Nuxt Router and Nuxt Link
-- Server Side vs Static Side
-- Improving SEO with vue-meta
-- Extending our app with cool new Nuxt features (Nuxt Modules)
-- Deploying a Full Static App to Netlify
+- [What is Nuxt.js and what does it offers](#what-is-nuxt.js-and-what-does-it-offers)
+- [A Look at the Nuxt Directory Structure]()
+- [Configuring Nuxt with Nuxt.config.js]()
+- [The concept of Layout and Pages]()
+- [File System Routing with Nuxt]()
+- [Fetching Data with Async Data]()
+- [Improving SEO with vue-meta]()
+- [Nuxt Plugins]()
+- [Managing state with Vuex Store]()
+- [Extending our app with Nuxt Modules]()
+- [Deploying our App to Netlify]()
 
 
 ## Introduction
-[Nuxt.js](https://nuxtjs.org/) is Vue framework for creating modern web applications that makes development painless and powerful with a great developer experience.
+[Nuxt.js](https://nuxtjs.org/) is a Vue framework for creating modern web applications that makes development painless and powerful with great developer experience.
 
-In this workshop, we'll cover everything you need to know to build a web application from scratch with Nuxtjs. Some things we'll cover include setting up extend the functionality with Nuxt Modules and deployment strategies.
+In this workshop, we'll cover everything you need to know to build a web application from scratch with Nuxtjs. Some things we'll cover include setting up a nuxt app and extending it's functionality with Nuxt Modules and finally, we'll look at some deployment strategies.
 
 ## Setup and Installation
 You need to have [Node](https://nodejs.org/) installed on your computer before we begin the workshop.
