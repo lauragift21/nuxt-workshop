@@ -65,6 +65,8 @@ git clone https://github.com/lauragift21/nuxt-workshop.git
 cd nuxt-workshop && yarn
 ```
 
+This repo is setup to use [TailwindCSS](https://tailwindcss.com/) for styling*
+
 ## What is Nuxt.js and What does it offers?
 
 
