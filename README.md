@@ -65,6 +65,17 @@ git clone https://github.com/lauragift21/nuxt-workshop.git
 cd nuxt-workshop && yarn
 ```
 
+## What is Nuxt.js and What does it offers?
+
+
+## A Look at Nuxt Directory Structure
+
+
+## Configuring Nuxt with `nuxt.config.js`
+
+## The Concept of Layout and Pages
+
+
 ## Additional Resources 
 [Nuxt Documentation](https://nuxtjs.org/guides)
 
