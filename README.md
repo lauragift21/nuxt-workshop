@@ -17,7 +17,7 @@ Instructor: <a href="https://giftegwuenu.com">Gift Egwuenu</a>
 - [The concept of Layout and Pages](#the-concept-of-layout-and-pages)
 - [File System Routing with Nuxt](#file-system-routing-with-nuxt)
 - [Fetching Data in Nuxt.js](#fetching-data-in-nuxt-js)
-- [Improving SEO with vue-meta]()
+- [Improving SEO with vue-meta](#improving-seo-with-vue-meta)
 - [Nuxt Plugins](#nuxt-plugins)
 - [Managing state with Vuex Store](#managing-state-with-vuex-store)
 - [Extending the app with Nuxt Modules](#extending-the-app-with-nuxt-modules)
@@ -128,6 +128,77 @@ Nuxt let's you customise **webpack configuration**,  define **CSS libraries** to
 ## Fetching Data in Nuxt.js
 
 ## Improving SEO with Vue-Meta
+
+In Nuxt applications, we can significantly improve SEO of the pages by adding correct meta tags to respective pages. Nuxt uses Vue Meta under the hood to update the document head and meta attributes of your application.
+
+You can add meta information in three different ways in Nuxt.js:
+
+![SEO Slide](./static/Seo.jpg)
+
+* Globally using the `head` property in nuxt.config.js
+
+```js
+export default {
+  head: {
+    title: 'Nuxt Workshop',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'This is the Nuxt Workshop Site'
+      }
+    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  }
+}
+```
+
+* Locally using the `head` as an object
+
+```js
+<script>
+export default {
+  head: {
+    title: 'About',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'This is the about page'
+      }
+    ],
+  }
+}
+</script>
+```
+* Locally using the `head` as a function so that you have access to data and computed properties.
+
+
+```js
+<script>
+export default {
+  data () {
+    return {
+      title: 'About'
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'This is the about page'
+        }
+      ],
+    }
+  }
+}
+</script>
+```
 
 ## Nuxt Plugins
 
