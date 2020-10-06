@@ -183,6 +183,111 @@ Views in Nuxt compose of App template, a Layout and an actual Page. In addition,
 
 ## File System Routing with Nuxt
 
+Nuxt.js automatically generates the **vue-router** configuration based on your file tree of Vue files inside the pages directory.
+
+Nuxt Routing can be achieved in several ways:
+
+* Automatic Routes:
+Automatic routes are created when a new page is added in the `Pages` directory.
+
+Let's say we have a Pages directory structure tree like so:
+
+```bash
+.pages
+├── profile
+│   └── index.vue
+├── index.vue
+└── README.md
+```
+The router configuration file will look like this:
+
+```js
+router: {
+  routes: [
+    {
+      name: 'index',
+      path: '/',
+      component: 'pages/index.vue'
+    },
+    {
+      name: 'profile',
+      path: '/profile',
+      component: 'pages/profile/index.vue'
+    },
+  ]
+}
+
+```
+
+* Dynamic Routes: You can define a **dynamic route** with a parameter, you need to define a `.vue` file OR a directory prefixed by an underscore.
+
+A tree structured like this: 
+
+```bash
+.pages
+├── _profile
+│   └── index.vue
+├── index.vue
+└── README.md
+```
+will generate this: 
+
+```js
+router: {
+  routes: [
+    {
+      name: 'index',
+      path: '/',
+      component: 'pages/index.vue'
+    },
+    {
+      name: 'profile',
+      path: '/:profile',
+      component: 'pages/profile/index.vue'
+    },
+  ]
+}
+
+```
+
+* Nested Routes: Nuxt.js lets you create nested route by using the children routes of vue-router.
+
+To define the parent component of a nested route, you need to create a Vue file with the same name as the directory which contain your children views.
+
+And include <nuxt-child/> inside the parent component
+
+
+```bash
+.pages
+├── profile
+│   └── index.vue
+├── profile.vue
+└── README.md
+```
+will generate this: 
+
+```js
+router: {
+  routes: [
+    {
+      path: '/profile',
+      component: 'pages/profile.vue',
+      children: [
+        {
+          name: 'profile',
+          path: '',
+          component: 'pages/profile/index.vue'
+        }
+      ]
+    },
+  ]
+}
+```
+
+* Navigation with Nuxt Link Component: The nuxt-link component is provided out of the box with nuxt and is used to link between pages. Instead of using `a` you will replace that with `nuxt-link` and instead of `href="/"`, NuxtLink uses `to="/"`.
+
+
+
 ## Fetching Data in Nuxt
 
 ## Improving SEO with Vue-Meta
