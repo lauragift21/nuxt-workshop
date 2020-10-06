@@ -17,7 +17,7 @@ Instructor: <a href="https://giftegwuenu.com">Gift Egwuenu</a>
 - [The concept of Layout and Pages](#the-concept-of-layout-and-pages)
 - [File System Routing with Nuxt](#file-system-routing-with-nuxt)
 - [Fetching Data in Nuxt](#fetching-data-in-nuxt)
-- [Improving SEO with vue-meta](#improving-seo-with-vue-meta)
+- [SEO with Nuxt and vue-meta](#seo-with-nuxt-and-vue-meta)
 - [Nuxt Plugins](#nuxt-plugins)
 - [Managing state with Vuex Store](#managing-state-with-vuex-store)
 - [Extending the app with Nuxt Modules](#extending-the-app-with-nuxt-modules)
@@ -64,7 +64,11 @@ git clone https://github.com/lauragift21/nuxt-workshop.git
 cd nuxt-workshop && yarn
 ```
 
-This repo is setup to use [TailwindCSS](https://tailwindcss.com/) for styling*
+> This repo is setup to use [TailwindCSS](https://tailwindcss.com/) for **styling**.
+
+### Exercise 1
+
+Setup a Nuxt project using the guide detailed above and make sure to have the project running on your computer.
 
 ## What is Nuxt.js and what does it offers?
 
@@ -179,6 +183,10 @@ Nuxt add special attributes and functions to a Page to make development of our u
 Views in Nuxt compose of App template, a Layout and an actual Page. In addition, we can define custom meta tags for the head section of each page which are important for SEO (Search Engine Optimization) and setup other custom options in a Page.
 
 ![views](./static/views.png)
+
+### Exercise 2:
+
+Create an About Page within the **Pages Directory** and populate it with a short description about yourself or your bio.
 
 
 ## File System Routing with Nuxt
@@ -296,7 +304,7 @@ The nuxt-link component is provided out of the box with nuxt and is used to link
 
 ## Fetching Data in Nuxt
 
-## Improving SEO with Vue-Meta
+## SEO with Nuxt and Vue-Meta
 
 In Nuxt applications, we can significantly improve SEO of the pages by adding correct meta tags to respective pages. Nuxt uses Vue Meta under the hood to update the document head and meta attributes of our application.
 
@@ -369,6 +377,13 @@ export default {
 </script>
 ```
 
+### Exercise 4:
+
+Setup the required Meta Tags for your application on two levels:
+
+- Global Level (nuxt.config.js)
+- Local Level (About Component)
+
 ## Nuxt Plugins
 Nuxt.js Plugins allows us to define **Javascript Plugins** that we can run before instantiating the root Vue.js Application.
 
@@ -424,12 +439,17 @@ When there's a need to make functions or values available across the app. We can
 
 ## Extending the app with Nuxt Modules
 
+Modules are Nuxt.js extensions which can extend its core functionality and add endless integrations.
+
+
+
 ## Deploying the app to Netlify
 
 ## Additional Resources 
 [Nuxt Documentation](https://nuxtjs.org/guides)  
 [Nuxt Content](https://content.nuxtjs.org)  
 [Tailwind CSS](https://tailwindcss.com)
+[Tutorial on Nuxt Content](https://nuxtjs.org/blog/creating-blog-with-nuxt-content)
 
 ## License
 
