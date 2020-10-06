@@ -454,7 +454,22 @@ export default {
   buildModules: [
     '@nuxtjs/tailwindcss'
   ],
+  modules: [
+    '@nuxt/content'
+  ]
 }
+```
+
+### Nuxt Content Module
+
+Nuxt Content Module acts as a Git-based Headless CMS and let's you write in a content/ directory and fetch your Markdown, JSON, YAML, XML and CSV files through a MongoDB like API.
+
+## Setup
+
+```bash
+
+yarn add @nuxt/content
+
 ```
 
 ## Deployment Stratergies
