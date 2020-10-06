@@ -374,6 +374,8 @@ Nuxt.js Plugins allows us to define **Javascript Plugins** that we can run befor
 
 We'll need to create plugins in some of these use-cases:
 
+![plugins](./static/plugins.svg)
+
 #### Need to use Vue Plugins
 
 Every time we need to use `Vue.use()`, we should create a file in `plugins/` and add its path to `plugins` property in `nuxt.config.js`.
@@ -402,6 +404,17 @@ plugins: [
 
 We may want to use external packages/modules in our application.
 
+Like in `Axios` we can create a axios.js plugin for adding custom configurations.
+
+```js
+export default function ({ $axios, redirect }) {
+  $axios.onError(error => {
+    if (error.response.status === 404) {
+      redirect('/404')
+    }
+  })
+}
+```
 
 #### Inject variable in \$root or context
 
