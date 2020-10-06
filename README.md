@@ -191,7 +191,7 @@ Create an About Page within the **Pages Directory** and populate it with a short
 
 Here's an example:
 
-![about](./static/about.png)
+![about](./static/About.png)
 
 ## File System Routing with Nuxt
 
