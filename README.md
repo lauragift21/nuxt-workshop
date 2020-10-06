@@ -16,7 +16,7 @@ Instructor: <a href="https://giftegwuenu.com">Gift Egwuenu</a>
 - [Configuring Nuxt with Nuxt.config.js](#configuring-nuxt-with-nuxt-config-js)
 - [The concept of Layout and Pages](#the-concept-of-layout-and-pages)
 - [File System Routing with Nuxt](#file-system-routing-with-nuxt)
-- [Fetching Data in Nuxt.js](#fetching-data-in-nuxt-js)
+- [Fetching Data in Nuxt](#fetching-data-in-nuxt)
 - [Improving SEO with vue-meta](#improving-seo-with-vue-meta)
 - [Nuxt Plugins](#nuxt-plugins)
 - [Managing state with Vuex Store](#managing-state-with-vuex-store)
@@ -84,7 +84,9 @@ Some of these features are what make Nuxt performant and a good choice for your 
 
 ## A Look at Nuxt Directory Structure
 
-The default Nuxt application structure is made up of different files and directories in itself which can be used for building small or large scale application. The way the directory is setup can always be changed to fit your project needs.
+The default Nuxt application structure is made up of different files and directories in itself which can be used in building small or large scale applications. The way the directory is setup can always be modified to fit your project needs.
+
+This is a structure tree of a Nuxt directory: 
 
 ```bash
 .
@@ -119,13 +121,69 @@ The default Nuxt application structure is made up of different files and directo
 
 The configuration for Nuxt application is great and it already covers most use-cases, but Nuxt allows you extend the configuration by specifying the config properties in the `nuxt.config.js` file.
 
-Nuxt let's you customise **webpack configuration**,  define **CSS libraries** to use globally, create environment variables, define meta data for your application and so much more can be done in the config file.
+Nuxt let's you customise **webpack configuration**,  define **CSS libraries** to use globally, create **environment variables**, define **meta data** for your application and so much more can be done in the config file.
+
+The [docs](https://nuxtjs.org/guides/configuration-glossary/configuration-build) have a listing of all properties for customization in `nuxt.config.js` file.
 
 ## The Concept of Layout and Pages
 
-## File System Routing in Nuxt.js
+### Layouts
 
-## Fetching Data in Nuxt.js
+Layouts are a great help when you want to change the look and feel of your Nuxt.js app. Whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+
+In Nuxt, we can setup a **default Layout** that is used throughout an application, and also create custom layout when we decide to use a different layout on a page.
+
+You manage all the layouts within the `layouts` directory and Nuxt ships with a `default.vue` layout that is used by all pages unless a layout is specified for that page.
+
+```html
+<template>
+  <Nuxt />
+</template>
+```
+
+The **Nuxt component** added to a layout renders a Page component.
+
+
+### Pages
+
+Pages in Nuxt contain an application views and routes. Nuxt will translate all `.vue` files inside the pages directory into a page an automatically create a router configuration for it.
+
+Nuxt add special attributes and functions to a Page to make development of your universal app as eaasy as possible. 
+
+```js
+<template>
+  <h1 class="red">Hello {{ name }}!</h1>
+</template>
+
+<script>
+  export default {
+    // page properties go here
+    head () {
+
+    },
+    loading: true,
+    layout: 'Home'
+  }
+</script>
+
+<style>
+  .red {
+    color: red;
+  }
+</style>
+
+```
+
+### Views
+
+Views in Nuxt compose of App template, a Layout and an actual Page. In addition, you can define custom meta tags for the head section of each page which are important for SEO (Search Engine Optimization) and setup other custom options in a Page.
+
+![views](./static/views.png)
+
+
+## File System Routing with Nuxt
+
+## Fetching Data in Nuxt
 
 ## Improving SEO with Vue-Meta
 
