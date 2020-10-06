@@ -21,7 +21,7 @@ Instructor: <a href="https://giftegwuenu.com">Gift Egwuenu</a>
 - [Nuxt Plugins](#nuxt-plugins)
 - [Managing State with Vuex Store](#managing-state-with-vuex-store)
 - [Extending the App with Nuxt Modules](#extending-the-app-with-nuxt-modules)
-- [Deployment Startergies](#deployment-strategies)
+- [Deployment Strategies](#deployment-strategies)
 - [Deploying the App to Netlify](#deploying-the-app-to-netlify)
 
 
@@ -551,7 +551,7 @@ You can use the `<nuxt-content />` component to display content from the markdow
 In development mode, you can edit your content by double-clicking on the <nuxt-content> component. A textarea will allow you to edit the content of the current file and will save it on the file-system.
 
 
-## Deployment Stratergies
+## Deployment Strategies
 
 ## Additional Resources 
 [Nuxt Documentation](https://nuxtjs.org/guides)  
