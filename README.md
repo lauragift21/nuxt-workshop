@@ -306,7 +306,49 @@ The nuxt-link component is provided out of the box with nuxt and is used to link
 
 ## Fetching Data in Nuxt
 
-![nuxt lifecycle](./static/nuxt-schema.svg)
+In a Vue application, when fetching data on the client-side you will typically carry this out in a `mounted()` hook, this is also possible in Nuxt but some specific hooks needs to be able to render data during server side rendering. 
+
+Nuxt provides two hooks for fetching data:
+
+### Fetch Hook (v2.12+)
+This hook can be placed on **any component**, and provides shortcuts for rendering loading states (during client-side rendering) and errors.
+
+The example below shows how `fetch` works. it's using fetch method and `@nuxt/http` module to load data from external API and passes the data into the local state.
+
+```js
+<script>
+export default {
+  data() {
+    return {
+      countries: [],
+    };
+  },
+  async fetch() {
+    this.countries = await this.$http.$get(
+      "https://restcountries.eu/rest/v2/all?fields=name;capital;flag;population"
+    );
+  },
+};
+</script>
+```
+
+### AsyncData Hook
+This hook can only be placed on **page components**. Unlike `fetch`, this hook does not display a loading placeholder during client-side rendering: instead, this hook blocks route navigation until it is resolved, displaying a page error if it fails.
+
+The example below shows how `asyncData` works. it's using asyncData method and `@nuxt/http` module to load data from external API and returns that is then merged into the component data.
+
+```js
+<script>
+export default {
+  async asyncData({ $http }) {
+    const countries = await $http.$get(
+      "https://restcountries.eu/rest/v2/all?fields=name;capital;flag;population"
+    );
+    return { countries };
+  },
+};
+</script>
+```
 
 ## SEO in Nuxt with Vue-Meta
 
