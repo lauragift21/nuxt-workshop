@@ -460,11 +460,11 @@ export default {
 }
 ```
 
-### Nuxt Content Module
+## Nuxt Content Module
 
 Nuxt Content Module acts as a Git-based Headless CMS and let's you write in a content/ directory and fetch your Markdown, JSON, YAML, XML and CSV files through a MongoDB like API.
 
-## Setup
+### Setup
 
 ```bash
 
@@ -512,13 +512,13 @@ updatedAt
 
 ### Fetching Content
 
-Nuxt Content injects a `$content` instance that can be accessed anywhere using `this.$content` and plugins, nuxtServerInit, asyncData can access it from `$context.content`.
+Nuxt Content injects a `$content` instance that can be accessed anywhere using `this.$content` and plugins, nuxtServerInit, asyncData can access it from `$context.content` 
 
 ```js
 <script>
 export default {
-  async asyncData({ $content, params }) {
-    const article = await $content("articles", params.slug).fetch();
+  async asyncData({ $content }) {
+    const article = await $content("articles").fetch();
     return {
       article
     }
@@ -527,6 +527,10 @@ export default {
 </script>
 
 ```
+#### Content API
+
+This module exposes an API endpoint in development so you can easily see the JSON of each directory or file, it is available on `http://localhost:3000/_content/`.
+
 ### Displaying Content
 
 You can use the `<nuxt-content />` component to display content from the markdown body.
@@ -541,6 +545,12 @@ You can use the `<nuxt-content />` component to display content from the markdow
 </template>
 
 ```
+
+#### Live Editing 
+
+In development mode, you can edit your content by double-clicking on the <nuxt-content> component. A textarea will allow you to edit the content of the current file and will save it on the file-system.
+
+
 ## Deployment Stratergies
 
 ## Additional Resources 
