@@ -19,7 +19,7 @@ Instructor: <a href="https://giftegwuenu.com">Gift Egwuenu</a>
 - [Fetching Data in Nuxt](#fetching-data-in-nuxt)
 - [SEO in Nuxt with vue-meta](#seo-in-nuxt-with-vue-meta)
 - [Nuxt Plugins](#nuxt-plugins)
-- [Managing State with Vuex Store](#managing-state-with-vuex-store)
+<!-- - [Managing State with Vuex Store](#managing-state-with-vuex-store) -->
 - [Extending the App with Nuxt Modules](#extending-the-app-with-nuxt-modules)
 - [Deployment Strategies](#deployment-strategies)
 - [Deploying the App to Netlify](#deploying-the-app-to-netlify)
@@ -480,8 +480,6 @@ export default function ({ $axios, redirect }) {
 #### Inject variable in \$root or context
 
 When there's a need to make functions or values available across the app. We can inject those variables into **Vue instances (client side)**, the **context (server side)** and even in the Vuex store. It is a convention to prefix those functions with a $.
-
-## Managing state with Vuex Store
 
 ## Extending the app with Nuxt Modules
 
