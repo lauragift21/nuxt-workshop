@@ -471,7 +471,76 @@ Nuxt Content Module acts as a Git-based Headless CMS and let's you write in a co
 yarn add @nuxt/content
 
 ```
+Inside `nuxt.config.js` file:
 
+```js
+export default {
+  modules: [
+    '@nuxt/content'
+  ]
+}
+```
+
+Nuxt content follows a **three step process** from writing out content to fetching and displaying the content in the application.
+
+![content](./static/content.jpg)
+
+### Writing Content
+
+With Nuxt Content we need to create a `content/` directory in the root of the project where it is used.  Nuxt can parse  .md, .yaml, .json, .csv, .xml files.
+
+With the content directory with the following files:
+
+```bash
+content/
+  articles/
+    first-article.md
+    second-article.md
+  home.md
+```
+
+Will generate the following properties:
+
+```bash
+dir
+path
+slug
+extension (ex: .md)
+createdAt
+updatedAt
+```
+
+### Fetching Content
+
+Nuxt Content injects a `$content` instance that can be accessed anywhere using `this.$content` and plugins, nuxtServerInit, asyncData can access it from `$context.content`.
+
+```js
+<script>
+export default {
+  async asyncData({ $content, params }) {
+    const article = await $content("articles", params.slug).fetch();
+    return {
+      article
+    }
+  }
+};
+</script>
+
+```
+### Displaying Content
+
+You can use the `<nuxt-content />` component to display content from the markdown body.
+
+```html
+
+<template>
+  <section>
+    <h1>{{ article.title }}</h1>
+    <nuxt-content :document="article" />
+  </section>
+</template>
+
+```
 ## Deployment Stratergies
 
 ## Additional Resources 
