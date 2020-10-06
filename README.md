@@ -30,13 +30,13 @@ Instructor: <a href="https://giftegwuenu.com">Gift Egwuenu</a>
 In this workshop, we'll cover everything you need to know to build a web application from scratch with Nuxtjs. Some things we'll cover include setting up a nuxt app and extending it's functionality with Nuxt Modules and finally, we'll look at some deployment strategies.
 
 ## Setup and Installation
-You need to have [Node](https://nodejs.org/) installed on your computer before we begin the workshop.
+We need to have [Node](https://nodejs.org/) installed on our computer before we begin the workshop.
 
 Download Node for windows [here](https://nodejs.org/en/download/)
 
 Download Node for Mac using [Homebrew](https://brew.sh/).
 
-If you don't have that installed use this command to install it
+If we don't have that installed use this command to install it
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -84,7 +84,7 @@ Some of these features are what make Nuxt performant and a good choice for your 
 
 ## A Look at Nuxt Directory Structure
 
-The default Nuxt application structure is made up of different files and directories in itself which can be used in building small or large scale applications. The way the directory is setup can always be modified to fit your project needs.
+The default Nuxt application structure is made up of different files and directories in itself which can be used in building small or large scale applications. The way the directory is setup can always be modified to fit our project needs.
 
 This is a structure tree of a Nuxt directory: 
 
@@ -119,9 +119,9 @@ This is a structure tree of a Nuxt directory:
 
 ## Configuring Nuxt with `nuxt.config.js`
 
-The configuration for Nuxt application is great and it already covers most use-cases, but Nuxt allows you extend the configuration by specifying the config properties in the `nuxt.config.js` file.
+The configuration for Nuxt application is great and it already covers most use-cases, but Nuxt allows us extend the configuration by specifying the config properties in the `nuxt.config.js` file.
 
-Nuxt let's you customise **webpack configuration**,  define **CSS libraries** to use globally, create **environment variables**, define **meta data** for your application and so much more can be done in the config file.
+Nuxt let's us customise **webpack configuration**,  define **CSS libraries** to use globally, create **environment variables**, define **meta data** for our application and so much more can be done in the config file.
 
 The [docs](https://nuxtjs.org/guides/configuration-glossary/configuration-build) have a listing of all properties for customization in `nuxt.config.js` file.
 
@@ -129,11 +129,11 @@ The [docs](https://nuxtjs.org/guides/configuration-glossary/configuration-build)
 
 ### Layouts
 
-Layouts are a great help when you want to change the look and feel of your Nuxt.js app. Whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+Layouts are a great help when we want to change the look and feel of your Nuxt.js app. Whether we want to include a sidebar or have distinct layouts for mobile and desktop.
 
 In Nuxt, we can setup a **default Layout** that is used throughout an application, and also create custom layout when we decide to use a different layout on a page.
 
-You manage all the layouts within the `layouts` directory and Nuxt ships with a `default.vue` layout that is used by all pages unless a layout is specified for that page.
+We manage all the layouts within the `layouts` directory and Nuxt ships with a `default.vue` layout that is used by all pages unless a layout is specified for that page.
 
 ```html
 <template>
@@ -148,7 +148,7 @@ The **Nuxt component** added to a layout renders a Page component.
 
 Pages in Nuxt contain an application views and routes. Nuxt will translate all `.vue` files inside the pages directory into a page an automatically create a router configuration for it.
 
-Nuxt add special attributes and functions to a Page to make development of your universal app as eaasy as possible. 
+Nuxt add special attributes and functions to a Page to make development of our universal app as eaasy as possible. 
 
 ```js
 <template>
@@ -176,14 +176,14 @@ Nuxt add special attributes and functions to a Page to make development of your 
 
 ### Views
 
-Views in Nuxt compose of App template, a Layout and an actual Page. In addition, you can define custom meta tags for the head section of each page which are important for SEO (Search Engine Optimization) and setup other custom options in a Page.
+Views in Nuxt compose of App template, a Layout and an actual Page. In addition, we can define custom meta tags for the head section of each page which are important for SEO (Search Engine Optimization) and setup other custom options in a Page.
 
 ![views](./static/views.png)
 
 
 ## File System Routing with Nuxt
 
-Nuxt.js automatically generates the **vue-router** configuration based on your file tree of Vue files inside the pages directory.
+Nuxt.js automatically generates the **vue-router** configuration based on our file tree of Vue files inside the pages directory.
 
 Nuxt Routing can be achieved in several ways:
 
@@ -219,7 +219,7 @@ router: {
 
 ```
 
-* Dynamic Routes: You can define a **dynamic route** with a parameter, you need to define a `.vue` file OR a directory prefixed by an underscore.
+* Dynamic Routes: We can define a **dynamic route** with a parameter, we need to define a `.vue` file OR a directory prefixed by an underscore.
 
 A tree structured like this: 
 
@@ -250,9 +250,9 @@ router: {
 
 ```
 
-* Nested Routes: Nuxt.js lets you create nested route by using the children routes of vue-router.
+* Nested Routes: Nuxt.js lets us create nested route by using the children routes of vue-router.
 
-To define the parent component of a nested route, you need to create a Vue file with the same name as the directory which contain your children views.
+To define the parent component of a nested route, we need to create a Vue file with the same name as the directory which contain our children views.
 
 And include <nuxt-child/> inside the parent component
 
@@ -284,7 +284,7 @@ router: {
 }
 ```
 
-* Navigation with Nuxt Link Component: The nuxt-link component is provided out of the box with nuxt and is used to link between pages. Instead of using `a` you will replace that with `nuxt-link` and instead of `href="/"`, NuxtLink uses `to="/"`.
+* Navigation with Nuxt Link Component: The nuxt-link component is provided out of the box with nuxt and is used to link between pages. Instead of using `a` we will replace that with `nuxt-link` and instead of `href="/"`, NuxtLink uses `to="/"`.
 
 
 
@@ -292,9 +292,9 @@ router: {
 
 ## Improving SEO with Vue-Meta
 
-In Nuxt applications, we can significantly improve SEO of the pages by adding correct meta tags to respective pages. Nuxt uses Vue Meta under the hood to update the document head and meta attributes of your application.
+In Nuxt applications, we can significantly improve SEO of the pages by adding correct meta tags to respective pages. Nuxt uses Vue Meta under the hood to update the document head and meta attributes of our application.
 
-You can add meta information in three different ways in Nuxt.js:
+We can add meta information in three different ways in Nuxt.js:
 
 ![SEO Slide](./static/Seo.jpg)
 
@@ -336,7 +336,7 @@ export default {
 }
 </script>
 ```
-* Locally using the `head` as a function so that you have access to data and computed properties.
+* Locally using the `head` as a function so that we have access to data and computed properties.
 
 
 ```js
@@ -364,6 +364,40 @@ export default {
 ```
 
 ## Nuxt Plugins
+Nuxt.js Plugins allows us to define **Javascript Plugins** that we can run before instantiating the root Vue.js Application.
+
+We'll need to create plugins in some of these use-cases:
+
+* Need to use Vue Plugins: Every time we need to use `Vue.use()`, we should create a file in `plugins/` and add its path to `plugins` property in `nuxt.config.js`.
+
+In a case where we need to use a library like Vue Tooltip, we need to configure a Plugin before using it in the application.
+
+In `plugins/vue-tooltip.js` add the following:
+
+```js
+import Vue from 'vue'
+import VTooltip from 'v-tooltip'
+
+Vue.use(VTooltip)
+
+```
+
+In `nuxt.config.js` add: 
+
+```js
+plugins: [
+  '@/plugins/vue-tooltip.js'
+]
+```
+
+* Add External Packages like `axios`: We may want to use external packages/modules in our application.
+
+
+* Inject variable in \$root or context: When there's a need to make functions or values available across the app. We can inject those variables into **Vue instances (client side)**, the **context (server side)** and even in the Vuex store. It is a convention to prefix those functions with a $.
+
+
+
+
 
 ## Managing state with Vuex Store
 
