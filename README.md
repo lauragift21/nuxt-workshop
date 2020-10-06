@@ -14,13 +14,13 @@ Instructor: <a href="https://giftegwuenu.com">Gift Egwuenu</a>
 - [What is Nuxt.js and what does it offers](#what-is-nuxt.js-and-what-does-it-offers)
 - [A Look at the Nuxt Directory Structure](#a-look-at-the-nuxt-directory-structure)
 - [Configuring Nuxt with Nuxt.config.js](#configuring-nuxt-with-nuxt-config-js)
-- [The concept of Layout and Pages](#the-concept-of-layout-and-pages)
+- [The Concept of Layout and Pages](#the-concept-of-layout-and-pages)
 - [File System Routing with Nuxt](#file-system-routing-with-nuxt)
 - [Fetching Data in Nuxt](#fetching-data-in-nuxt)
-- [SEO with Nuxt and vue-meta](#seo-with-nuxt-and-vue-meta)
+- [SEO in Nuxt with vue-meta](#seo-in-nuxt-with-vue-meta)
 - [Nuxt Plugins](#nuxt-plugins)
-- [Managing state with Vuex Store](#managing-state-with-vuex-store)
-- [Extending the app with Nuxt Modules](#extending-the-app-with-nuxt-modules)
+- [Managing State with Vuex Store](#managing-state-with-vuex-store)
+- [Extending the App with Nuxt Modules](#extending-the-app-with-nuxt-modules)
 - [Deploying the App to Netlify](#deploying-the-app-to-netlify)
 
 
@@ -66,7 +66,7 @@ cd nuxt-workshop && yarn
 
 > This repo is setup to use [TailwindCSS](https://tailwindcss.com/) for **styling**.
 
-### Exercise 1
+### Exercise 1 (Installation and Setup)
 
 Setup a Nuxt project using the guide detailed above and make sure to have the project running on your computer.
 
@@ -184,10 +184,13 @@ Views in Nuxt compose of App template, a Layout and an actual Page. In addition,
 
 ![views](./static/views.png)
 
-### Exercise 2:
+### Exercise 2 (The Concept of Layouts and Pages)
 
 Create an About Page within the **Pages Directory** and populate it with a short description about yourself or your bio.
 
+Here's an example:
+
+![about](./static/about.png)
 
 ## File System Routing with Nuxt
 
@@ -300,11 +303,11 @@ router: {
 
 The nuxt-link component is provided out of the box with nuxt and is used to link between pages. Instead of using `a` we will replace that with `nuxt-link` and instead of `href="/"`, NuxtLink uses `to="/"`.
 
-
-
 ## Fetching Data in Nuxt
 
-## SEO with Nuxt and Vue-Meta
+![nuxt lifecycle](./static/nuxt-schema.svg)
+
+## SEO in Nuxt with Vue-Meta
 
 In Nuxt applications, we can significantly improve SEO of the pages by adding correct meta tags to respective pages. Nuxt uses Vue Meta under the hood to update the document head and meta attributes of our application.
 
@@ -377,7 +380,7 @@ export default {
 </script>
 ```
 
-### Exercise 4:
+### Exercise 4 (SEO in Nuxt with Vue Meta)
 
 Setup the required Meta Tags for your application on two levels:
 
