@@ -21,6 +21,7 @@ Instructor: <a href="https://giftegwuenu.com">Gift Egwuenu</a>
 - [Nuxt Plugins](#nuxt-plugins)
 - [Managing State with Vuex Store](#managing-state-with-vuex-store)
 - [Extending the App with Nuxt Modules](#extending-the-app-with-nuxt-modules)
+- [Deployment Startergies](#deployment-strategies)
 - [Deploying the App to Netlify](#deploying-the-app-to-netlify)
 
 
@@ -444,9 +445,19 @@ When there's a need to make functions or values available across the app. We can
 
 Modules are Nuxt.js extensions which can extend its core functionality and add endless integrations.
 
+[A list of curated Modules from the Nuxt Community](https://github.com/nuxt-community/awesome-nuxt#modules)
 
+In our app, we're already using a TailwindCSS Module as a `buildmodule` - that are only imported during build time or in development mode.
 
-## Deploying the app to Netlify
+```js
+export default {
+  buildModules: [
+    '@nuxtjs/tailwindcss'
+  ],
+}
+```
+
+## Deployment Stratergies
 
 ## Additional Resources 
 [Nuxt Documentation](https://nuxtjs.org/guides)  
