@@ -9,7 +9,7 @@
       />
       <div class="px-10">
         <h2 class="text-3xl font-bold">{{ data.name }}</h2>
-        <p class="text-xl text-gray-900">{{ data.login }}</p>
+        <p class="text-xl text-gray-900">{{ data.owner }}</p>
         <a class="pt-2 text-xl underline" :href="data.blog">{{ data.blog }}</a>
         <h2 class="pt-2 text-xl">{{ data.bio }}</h2>
         <h2 v-if="data.company" class="pt-2 text-xl font-bold">💼 {{ data.company }}</h2>
