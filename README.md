@@ -19,7 +19,6 @@ Instructor: <a href="https://giftegwuenu.com">Gift Egwuenu</a>
 - [Fetching Data in Nuxt](#fetching-data-in-nuxt)
 - [SEO in Nuxt with vue-meta](#seo-in-nuxt-with-vue-meta)
 - [Nuxt Plugins](#nuxt-plugins)
-<!-- - [Managing State with Vuex Store](#managing-state-with-vuex-store) -->
 - [Extending the App with Nuxt Modules](#extending-the-app-with-nuxt-modules)
 - [Deployment Strategies](#deployment-strategies)
 - [Deploying the App to Netlify](#deploying-the-app-to-netlify)
