@@ -187,7 +187,8 @@ Nuxt.js automatically generates the **vue-router** configuration based on our fi
 
 Nuxt Routing can be achieved in several ways:
 
-* Automatic Routes:
+#### Automatic Routes
+
 Automatic routes are created when a new page is added in the `Pages` directory.
 
 Let's say we have a Pages directory structure tree like so:
@@ -219,7 +220,9 @@ router: {
 
 ```
 
-* Dynamic Routes: We can define a **dynamic route** with a parameter, we need to define a `.vue` file OR a directory prefixed by an underscore.
+#### Dynamic Routes
+
+We can define a **dynamic route** with a parameter, we need to define a `.vue` file OR a directory prefixed by an underscore.
 
 A tree structured like this: 
 
@@ -250,11 +253,12 @@ router: {
 
 ```
 
-* Nested Routes: Nuxt.js lets us create nested route by using the children routes of vue-router.
+#### Nested Routes 
+Nuxt.js lets us create nested route by using the children routes of vue-router.
 
 To define the parent component of a nested route, we need to create a Vue file with the same name as the directory which contain our children views.
 
-And include <nuxt-child/> inside the parent component
+And include `<nuxt-child/>` inside the parent component:
 
 
 ```bash
@@ -284,7 +288,9 @@ router: {
 }
 ```
 
-* Navigation with Nuxt Link Component: The nuxt-link component is provided out of the box with nuxt and is used to link between pages. Instead of using `a` we will replace that with `nuxt-link` and instead of `href="/"`, NuxtLink uses `to="/"`.
+#### Navigation with Nuxt Link Component
+
+The nuxt-link component is provided out of the box with nuxt and is used to link between pages. Instead of using `a` we will replace that with `nuxt-link` and instead of `href="/"`, NuxtLink uses `to="/"`.
 
 
 
@@ -368,7 +374,9 @@ Nuxt.js Plugins allows us to define **Javascript Plugins** that we can run befor
 
 We'll need to create plugins in some of these use-cases:
 
-* Need to use Vue Plugins: Every time we need to use `Vue.use()`, we should create a file in `plugins/` and add its path to `plugins` property in `nuxt.config.js`.
+#### Need to use Vue Plugins
+
+Every time we need to use `Vue.use()`, we should create a file in `plugins/` and add its path to `plugins` property in `nuxt.config.js`.
 
 In a case where we need to use a library like Vue Tooltip, we need to configure a Plugin before using it in the application.
 
@@ -390,14 +398,14 @@ plugins: [
 ]
 ```
 
-* Add External Packages like `axios`: We may want to use external packages/modules in our application.
+#### Add External Packages like `axios`
+
+We may want to use external packages/modules in our application.
 
 
-* Inject variable in \$root or context: When there's a need to make functions or values available across the app. We can inject those variables into **Vue instances (client side)**, the **context (server side)** and even in the Vuex store. It is a convention to prefix those functions with a $.
+#### Inject variable in \$root or context
 
-
-
-
+When there's a need to make functions or values available across the app. We can inject those variables into **Vue instances (client side)**, the **context (server side)** and even in the Vuex store. It is a convention to prefix those functions with a $.
 
 ## Managing state with Vuex Store
 
