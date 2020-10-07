@@ -1,9 +1,11 @@
 <template>
   <section class="container mx-auto">
-    <h1 class="font-bold text-3xl">{{ article.title }}</h1>
+    <h1 class="font-bold text-3xl mb-4 text-center">{{ article.title }}</h1>
     <nuxt-content :document="article" />
-    <p class="font-bold">Written By:</p>
-    <author :author="article.author" />
+    <div class="lg:ml-64">
+      <p class="font-bold">Written By:</p>
+      <author :author="article.author" />
+    </div>
   </section>
 </template>
 
@@ -21,6 +23,7 @@ export default {
 <style>
 .nuxt-content {
   max-width: 800px;
+  margin: 0 auto;
 }
 .nuxt-content h2 {
   font-weight: bold;
@@ -32,8 +35,5 @@ export default {
 }
 .nuxt-content p {
   margin-bottom: 20px;
-}
-.nuxt-content-highlight {
-  max-width: 700px;
 }
 </style>
