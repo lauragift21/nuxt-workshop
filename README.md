@@ -421,7 +421,7 @@ export default {
 </script>
 ```
 
-### Exercise 4 (SEO in Nuxt with Vue Meta)
+### Exercise 3 (SEO in Nuxt with Vue Meta)
 
 Setup the required Meta Tags for your application on two levels:
 
@@ -588,6 +588,9 @@ You can use the `<nuxt-content />` component to display content from the markdow
 
 In development mode, you can edit your content by double-clicking on the <nuxt-content> component. A textarea will allow you to edit the content of the current file and will save it on the file-system.
 
+### Exercise 4 (Nuxt Content)
+
+Create a new directory in `content` called **products** and add markdown files with metadata about any product (gadgets, food, clothes). Then, create a Page called **Product.vue** inside `pages` directory and fetch and display the content in the page.
 
 ## Deployment Strategies
 
