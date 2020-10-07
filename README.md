@@ -302,6 +302,13 @@ router: {
 
 The nuxt-link component is provided out of the box with nuxt and is used to link between pages. Instead of using `a` we will replace that with `nuxt-link` and instead of `href="/"`, NuxtLink uses `to="/"`.
 
+```html
+<template>
+  <nuxt-link to="/">Home page</nuxt-link>
+</template>
+
+```
+
 ## Fetching Data in Nuxt
 
 In a Vue application, when fetching data on the client-side you will typically carry this out in a `mounted()` hook, this is also possible in Nuxt but some specific hooks needs to be able to render data during server side rendering. 
