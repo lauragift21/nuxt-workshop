@@ -5,7 +5,7 @@
     </h1>
     <div class="grid grid-cols-2">
       <section
-        class="flex items-center mb-4"
+        class="flex flex-col items-center mb-4"
         v-for="country in countries"
         :key="country.name"
       >
