@@ -11,9 +11,9 @@ Instructor: <a href="https://giftegwuenu.com">Gift Egwuenu</a>
 ## Sections
 - [Introduction](#Introduction)
 - [Setup and Installation](#setup-and-installation)
-- [What is Nuxt.js and what does it offers](#what-is-nuxt.js-and-what-does-it-offers)
+- [What is Nuxt.js and what does it offers?](#what-is-nuxt.js-and-what-does-it-offers?)
 - [A Look at the Nuxt Directory Structure](#a-look-at-the-nuxt-directory-structure)
-- [Configuring Nuxt with Nuxt.config.js](#configuring-nuxt-with-nuxt-config-js)
+- [Configuring Nuxt with Nuxt.config.js](#configuring-nuxt-with-nuxt.config.js)
 - [The Concept of Layout and Pages](#the-concept-of-layout-and-pages)
 - [File System Routing with Nuxt](#file-system-routing-with-nuxt)
 - [Fetching Data in Nuxt](#fetching-data-in-nuxt)
@@ -120,7 +120,7 @@ This is a structure tree of a Nuxt directory:
 └── README.md
 ```
 
-## Configuring Nuxt with `nuxt.config.js`
+## Configuring Nuxt with nuxt.config.js
 
 The configuration for Nuxt application is great and it already covers most use-cases, but Nuxt allows us extend the configuration by specifying the config properties in the `nuxt.config.js` file.
 
