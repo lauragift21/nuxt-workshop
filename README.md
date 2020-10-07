@@ -21,7 +21,6 @@ Instructor: <a href="https://giftegwuenu.com">Gift Egwuenu</a>
 - [Nuxt Plugins](#nuxt-plugins)
 - [Extending the App with Nuxt Modules](#extending-the-app-with-nuxt-modules)
 - [Deployment Strategies](#deployment-strategies)
-- [Deploying the App to Netlify](#deploying-the-app-to-netlify)
 
 
 ## Introduction
@@ -592,11 +591,93 @@ In development mode, you can edit your content by double-clicking on the <nuxt-c
 
 ## Deployment Strategies
 
+Nuxt applications can be deployed in **three** different ways using different rendering modes:
+
+- Single Page Application(SPA)
+- Server Side Rendering (SSR)
+- Static Site Generation (SSG)
+
+Let's explore each of these and see how they differ.
+
+### Single Page Applications
+Single Page Application(SPA) is an application that is rendered on the browser
+
+```js
+export default {
+  ssr: false
+}
+```
+To deploy a Nuxt application in SPA mode. You run the command: 
+
+```json
+"scripts" : {
+  "build": "nuxt build",
+}
+```
+
+There's a problem with refresh as by default on netlify the site redirects to "404 not found". To fix this you need to add a generate property to `nuxt.config.js` file.
+
+```js
+export default {
+  generate: {
+    fallback: true
+  }
+}
+```
+
+### Server Side Rendered Applications
+Server-side rendering (SSR), is the ability of an application to contribute by displaying the web-page on the **server** instead of rendering it in the browser. Server-side sends a fully rendered page to the client; the client's JavaScript bundle takes over which then allows the Vue.js app to hydrate.
+
+To enable Nuxt know you want your site deployed as an SSR you can unset the `ssr` value to true or take it out entirely as this is the default value and doesn't need to be set.
+
+```js
+export default {
+  ssr: true // default value
+}
+```
+
+To build and start the app we need to use the command:
+
+```json
+"scripts" : {
+  "build": "nuxt build",
+  "start": "nuxt start"
+}
+```
+
+### Static Site Generated Applications
+Single-page application (SPA) directly interacts with the browser by dynamically rewriting the current web page with new data from the web server, instead of the default method of the browser loading entire new pages. The goal is faster transitions that make the website feel more like a native app.
+
+
+With **static site generation** your application gets rendered during the **build** phase and deployed to any static hosting services such as Netlify, Github pages, Vercel etc. This means that **no server** is needed in order to deploy your application.
+
+Nuxt requires you set the `target` property to `static` to ensure it's deployed as a static site.
+
+```js
+export default {
+  target: static
+}
+```
+
+build command for generating static files that will then 
+```json
+"scripts" : {
+  "generate": "nuxt generate"
+}
+```
+
+### Exercise 5: Deployment Strategies
+
+We now understand the different ways of deploying a Nuxt application.
+
+Let's deploy our application to [Netlify](https://netlify.com) using the Static Generated method(SSG).
+
 ## Additional Resources 
 [Nuxt Documentation](https://nuxtjs.org/guides)  
 [Nuxt Content](https://content.nuxtjs.org)  
 [Tailwind CSS](https://tailwindcss.com)
 [Tutorial on Nuxt Content](https://nuxtjs.org/blog/creating-blog-with-nuxt-content)
+[Deploy Nuxt app to Netlify](https://nuxtjs.org/faq/netlify-deployment) 
 
 ## License
 
