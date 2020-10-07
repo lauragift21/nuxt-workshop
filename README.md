@@ -651,20 +651,24 @@ Single-page application (SPA) directly interacts with the browser by dynamically
 
 With **static site generation** your application gets rendered during the **build** phase and deployed to any static hosting services such as Netlify, Github pages, Vercel etc. This means that **no server** is needed in order to deploy your application.
 
-Nuxt requires you set the `target` property to `static` to ensure it's deployed as a static site.
+Nuxt requires you set the `target` property to `static` to ensure it's deployed as a static site:
 
 ```js
 export default {
   target: static
 }
 ```
+build command for creating HTML and JavaScript file:
 
-build command for generating static files that will then 
 ```json
 "scripts" : {
   "generate": "nuxt generate"
 }
 ```
+
+the `generate` command will build the app and generate it's HTML and JavaScript files inside a folder called `dist` and this is what the CDN then renders on the browser. 
+
+For every change that is made to the application there need to be a rebuild phase, that's where static hosting comes in because this process is automated when you use these service.
 
 ### Exercise 5: Deployment Strategies
 
@@ -675,8 +679,8 @@ Let's deploy our application to [Netlify](https://netlify.com) using the Static 
 ## Additional Resources 
 [Nuxt Documentation](https://nuxtjs.org/guides)  
 [Nuxt Content](https://content.nuxtjs.org)  
-[Tailwind CSS](https://tailwindcss.com)
-[Tutorial on Nuxt Content](https://nuxtjs.org/blog/creating-blog-with-nuxt-content)
+[Tailwind CSS](https://tailwindcss.com)  
+[Tutorial on Nuxt Content](https://nuxtjs.org/blog/creating-blog-with-nuxt-content)  
 [Deploy Nuxt app to Netlify](https://nuxtjs.org/faq/netlify-deployment) 
 
 ## License
