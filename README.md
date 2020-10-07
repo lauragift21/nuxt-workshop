@@ -593,14 +593,14 @@ In development mode, you can edit your content by double-clicking on the <nuxt-c
 
 Nuxt applications can be deployed in **three** different ways using different rendering modes:
 
-- Single Page Application(SPA)
-- Server Side Rendering (SSR)
-- Static Site Generation (SSG)
+- **Single Page Application(SPA)**
+- **Server Side Rendering (SSR)**
+- **Static Site Generation (SSG)**
 
 Let's explore each of these and see how they differ.
 
 ### Single Page Applications
-Single Page Application(SPA) is an application that is rendered on the browser
+Single-page application (SPA) directly interacts with the browser by dynamically rewriting the current web page with new data from the web server, instead of the default method of the browser loading entire new pages. The goal is faster transitions that make the website feel more like a native app.
 
 ```js
 export default {
@@ -646,9 +646,6 @@ To build and start the app we need to use the command:
 ```
 
 ### Static Site Generated Applications
-Single-page application (SPA) directly interacts with the browser by dynamically rewriting the current web page with new data from the web server, instead of the default method of the browser loading entire new pages. The goal is faster transitions that make the website feel more like a native app.
-
-
 With **static site generation** your application gets rendered during the **build** phase and deployed to any static hosting services such as Netlify, Github pages, Vercel etc. This means that **no server** is needed in order to deploy your application.
 
 Nuxt requires you set the `target` property to `static` to ensure it's deployed as a static site:
